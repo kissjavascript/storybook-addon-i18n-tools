@@ -4,10 +4,10 @@ import TestUtils from 'react-addons-test-utils';
 import addons from '@kadira/storybook-addons';
 import ToggleButton from 'react-toggle-button';
 import sinon from 'sinon';
+import createMockChannel from 'storybook-channel-mock';
 
 import SwapTextDirection from '../';
 import { SWAP_TEXT_DIRECTION } from '../../../../shared';
-import createMockChannel from '../../../../preview/__tests__/helpers/createMockChannel';
 
 
 describe('Component: SwapTextDirection', function () {

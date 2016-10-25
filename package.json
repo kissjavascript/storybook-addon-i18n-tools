@@ -24,7 +24,6 @@
   "homepage": "https://github.com/joscha/storybook-addon-i18n-tools#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.20.1",
-    "@kadira/storybook-channel": "^1.1.0",
     "babel-cli": "^6.14.0",
     "babel-jest": "^16.0.0",
     "babel-preset-react-app": "^1.0.0",
@@ -35,7 +34,8 @@
     "react-dom": "^15.3.2",
     "semantic-release": "^4.3.5",
     "shelljs": "^0.7.4",
-    "sinon": "^1.17.6"
+    "sinon": "^1.17.6",
+    "storybook-channel-mock": "^1.0.0"
   },
   "peerDependencies": {
     "@kadira/storybook-addons": "^1.5.0",
@@ -44,12 +44,6 @@
   },
   "dependencies": {
     "react-toggle-button": "^2.1.0"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/helpers/"
-    ]
   },
   "config": {
     "commitizen": {

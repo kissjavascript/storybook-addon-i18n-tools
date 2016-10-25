@@ -1,7 +1,7 @@
 import addons from '@kadira/storybook-addons';
+import createMockChannel from 'storybook-channel-mock';
 
 import { SWAP_TEXT_DIRECTION } from '../../shared';
-import createMockChannel from './helpers/createMockChannel';
 import { init } from '../';
 
 
