@@ -5,7 +5,8 @@
   "scripts": {
     "prepublish": "BABEL_ENV=production node .scripts/npm-prepublish.js",
     "storybook": "start-storybook -p 9001",
-    "test": "jest --coverage --watch",
+    "tdd": "jest --coverage --watch",
+    "test": "jest --coverage",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
