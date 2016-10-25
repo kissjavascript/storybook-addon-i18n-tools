@@ -28,3 +28,6 @@ Import the addon in your storybook config to initialize it:
 ```js
 import 'storybook-addon-i18n-tools';
 ```
+
+## Known issues
+* Toggle button state does not reset when navigating away from the current story (PR would be 💖)
