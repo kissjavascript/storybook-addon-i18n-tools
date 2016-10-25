@@ -6,7 +6,7 @@
 
 The i18n toolbox addon can be used to swap text direction in stories. This addon works with [React Storybook](https://github.com/kadirahq/react-storybook).
 
-![Screenshot of the add-on](docs/screenshot.png)
+![Screencast of the add-on](docs/animation.gif)
 
 ## Getting Started
 
