@@ -23,16 +23,8 @@ Add this line to your `addons.js` file (create this file inside your storybook c
 import 'storybook-addon-i18n-tools/register';
 ```
 
-Import the addon in your storybook config to initialize it.
+Import the addon in your storybook config to initialize it:
 
 ```js
-import { storiesOf } from '@kadira/storybook'
-import 'storybook-addon-i18n-tools'
-
-storiesOf('Some component', module)
-  .add('some view', () => (
-    <button>
-      I will change text direction
-    </button>
-  ));
+import 'storybook-addon-i18n-tools';
 ```
