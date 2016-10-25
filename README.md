@@ -1,36 +1,37 @@
-# Hello World Addon
+# I18n Toolbox Storybook Add-on
 
-> **NOTE**
-This is an example addon for Kadira Storybooks. Check the source code (and comments) to learn how to write addons. Also serves as a boilerplate for new addons.
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-The Hello World addon can be used to display a simple text message set by stories. This addon works with both [React Storybook](https://github.com/kadirahq/react-storybook) and [React Native Storybook](https://github.com/kadirahq/react-native-storybook).
 
-![](docs/screenshot.png)
+The i18n toolbox addon can be used to swap text direction in stories. This addon works with [React Storybook](https://github.com/kadirahq/react-storybook).
+
+![Screenshot of the add-on](docs/screenshot.png)
 
 ## Getting Started
 
 First, install the addon
 
 ```shell
-npm install -D @kadira/storybook-addon-hello
+npm install -D storybook-addon-i18n-tools
 ```
 
 Add this line to your `addons.js` file (create this file inside your storybook config directory if needed).
 
 ```js
-import '@kadira/storybook-addon-hello/register';
+import 'storybook-addon-i18n-tools/register';
 ```
 
-Import the `hello` function and use it to create actions handlers. When creating action handlers, provide a string which should be visible on the panel.
+Import the addon in your storybook config to initialize it.
 
 ```js
 import { storiesOf } from '@kadira/storybook'
-import { hello } from '@kadira/storybook-addon-hello'
+import 'storybook-addon-i18n-tools'
 
-storiesOf('Button', module)
-  .add('default view', () => (
-    <Button onClick={ hello('Hello World') }>
-      Hello World!
-    </Button>
-  ))
+storiesOf('Some component', module)
+  .add('some view', () => (
+    <button>
+      I will change text direction
+    </button>
+  ));
 ```

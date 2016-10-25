@@ -1,39 +1,58 @@
 {
-  "name": "@kadira/storybook-addon-hello",
-  "version": "1.0.5",
-  "description": "Hello World addon for storybook",
+  "name": "storybook-addon-i18n-tools",
+  "description": "Internationalization tools addon for storybook",
   "main": "preview.js",
   "scripts": {
     "prepublish": "BABEL_ENV=production node .scripts/npm-prepublish.js",
     "storybook": "start-storybook -p 9001",
-    "test": "jest --coverage --watch"
+    "test": "jest --coverage --watch",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kadirahq/storybook-addon-hello.git"
+    "url": "https://github.com/joscha/storybook-addon-i18n-tools.git"
   },
   "keywords": [
-    "storybook"
+    "storybook",
+    "i18"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kadirahq/storybook-addon-hello/issues"
+    "url": "https://github.com/joscha/storybook-addon-i18n-tools/issues"
   },
-  "homepage": "https://github.com/kadirahq/storybook-addon-hello#readme",
+  "homepage": "https://github.com/joscha/storybook-addon-i18n-tools#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.20.1",
+    "@kadira/storybook-channel": "^1.1.0",
     "babel-cli": "^6.14.0",
-    "babel-jest": "^15.0.0",
-    "babel-preset-react-app": "^0.2.1",
+    "babel-jest": "^16.0.0",
+    "babel-preset-react-app": "^1.0.0",
+    "cz-conventional-changelog": "^1.2.0",
     "jest": "^16.0.0",
     "react": "^15.3.1",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
-    "shelljs": "^0.7.4"
+    "semantic-release": "^4.3.5",
+    "shelljs": "^0.7.4",
+    "sinon": "^1.17.6"
   },
   "peerDependencies": {
     "@kadira/storybook-addons": "^1.5.0",
     "react": "^0.14.7 || ^15.0.0",
     "react-dom": "^0.14.7 || ^15.0.0"
+  },
+  "dependencies": {
+    "react-toggle-button": "^2.1.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/helpers/"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

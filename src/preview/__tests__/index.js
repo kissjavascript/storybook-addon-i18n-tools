@@ -1,28 +1,28 @@
 import addons from '@kadira/storybook-addons';
-import { EVENT_ID } from '../../shared';
-import { init, hello } from '../';
 
-describe('init', function () {
-  it('should do nothing', function () {
+import { SWAP_TEXT_DIRECTION } from '../../shared';
+import createMockChannel from './helpers/createMockChannel';
+import { init } from '../';
+
+
+describe('init', () => {
+  let channel;
+
+  beforeEach(() => {
+    channel = createMockChannel();
+    addons.setChannel(channel);
+  });
+
+  it('should listen to text direction changes', () => {
     init();
-  });
-});
+    const TEST_DIRECTION = 'foo';
+    channel.emit(SWAP_TEXT_DIRECTION, { direction: TEST_DIRECTION });
 
-describe('hello', function () {
-  it('hello should return a function', function () {
-    expect(typeof hello('world')).toBe('function');
-  });
-});
-
-describe('hello handler', function () {
-  it('hello handler should emit event to channel', function () {
-    const messages = [];
-    addons._channel = {
-      emit: (...args) => messages.push(args),
-    };
-    const random = Math.random().toString(16).slice(2);
-    const handler = hello(random);
-    handler();
-    expect(messages).toEqual([ [EVENT_ID, {text: random}] ]);
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        expect(document.body.dir).toEqual(TEST_DIRECTION);
+        resolve();
+      }, 1);
+    });
   });
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { hello } from '../preview';
+require('../src/preview').init();
 
-storiesOf('Button', module)
-  .add('Hello World', () => (
-    <button onClick={hello('Hello World')}>Say "Hello World"</button>
-  ))
-  .add('Hello Earth', () => (
-    <button onClick={hello('Hello Earth')}>Say "Hello Earth"</button>
+storiesOf('i18n toolbox', module)
+  .add('Test story', () => (
+    <div style={{ display: 'flex' }}>
+      <span style={{ backgroundColor: 'lightgreen' }}>text start &gt;</span>
+      <span style={{ backgroundColor: 'lightblue' }}>text end &gt;</span>
+    </div>
   ));

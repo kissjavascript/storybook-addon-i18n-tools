@@ -1,4 +1,3 @@
-// addons, panels and events get unique names using a prefix
-export const ADDON_ID = 'kadirahq/storybook-addon-hello';
-export const PANEL_ID = `${ADDON_ID}/hello-panel`;
-export const EVENT_ID = `${ADDON_ID}/hello-event`;
+export const ADDON_ID = 'joscha/i18n-tools';
+export const PANEL_ID = `${ADDON_ID}/tool-panel`;
+export const SWAP_TEXT_DIRECTION = `${ADDON_ID}/events/swap`;
