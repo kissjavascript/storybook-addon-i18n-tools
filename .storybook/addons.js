@@ -2,5 +2,5 @@
 // import '@kadira/storybook/addons';
 
 // Use the line below to register this addon
-// import '@kadira/storybook-addon-hello/register';
+// import 'storybook-addon-i18n-tools/register';
 require('../src/manager').init();
