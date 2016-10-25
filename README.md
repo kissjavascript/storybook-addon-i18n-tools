@@ -30,4 +30,4 @@ import 'storybook-addon-i18n-tools';
 ```
 
 ## Known issues
-* Toggle button state does not reset when navigating away from the current story (PR would be 💖)
+* Toggle button state does not reset [when navigating away from the current story](https://github.com/kadirahq/react-storybook/issues/568) (PR would be 💖)
