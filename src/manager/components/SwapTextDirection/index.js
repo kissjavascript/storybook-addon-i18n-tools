@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ToggleButton from 'react-toggle-button'
-import addons from '@kadira/storybook-addons';
+import addons from '@storybook/addons';
 
 import { SWAP_TEXT_DIRECTION } from '../../../shared';
 
