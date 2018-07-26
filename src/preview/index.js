@@ -1,4 +1,4 @@
-import addons from '@kadira/storybook-addons';
+import addons from '@storybook/addons';
 
 import { SWAP_TEXT_DIRECTION } from '../shared';
 import SwapTextDirection from '../manager/components/SwapTextDirection';
